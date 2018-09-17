@@ -14,21 +14,26 @@ void Prime::setData(int nData)
 	this->data = nData;
 }
 
+//return 0 != prime data
+
 int Prime::CheckPrime()
 {
-	if ((data % PRIME_NUMBER_TWO) == 0)
+	int PRIME_ARRAY[] = { 
+		PRIME_NUMBER_TWO, 
+		PRIME_NUMBER_THREE, 
+		PRIME_NUMBER_FIVE, 
+		PRIME_NUMBER_SEVEN
+	};
+
+	for(int i = 0; i < 4; i++)
 	{
-		if (data == PRIME_NUMBER_TWO)
-			return PRIME_NUMBER_TWO;
-		else
-			return 0;
+		if ((data % PRIME_ARRAY[i]) == 0)
+		{
+			if (data == PRIME_ARRAY[i])
+				return PRIME_ARRAY[i];
+			else
+				return 0;
+		}
 	}
-	else if ((data % PRIME_NUMBER_THREE) == 0)
-		return 0;
-	else if ((data % PRIME_NUMBER_FIVE) == 0)
-		return 0;
-	else if ((data % PRIME_NUMBER_FIVE) == 0)
-		return 0;
-	else
-		return this->data;
+	return this->data;
 }

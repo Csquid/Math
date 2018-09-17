@@ -6,5 +6,6 @@
 #define PRIME_NUMBER_TWO   2
 #define PRIME_NUMBER_THREE 3
 #define PRIME_NUMBER_FIVE  5
+#define PRIME_NUMBER_SEVEN 7
 
 #endif
